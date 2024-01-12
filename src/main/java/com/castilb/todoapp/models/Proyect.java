@@ -11,17 +11,17 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "proyect")
+public class Proyect {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String firstname;
-    private String lastname;
-    private String email;
-    private String password;
+    private String name;
+    private String description;
     private boolean state;
     private Date createAt;
     private Date updateAt;
+    @ManyToOne
+    private User user;
 }
